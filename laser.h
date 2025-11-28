@@ -15,8 +15,10 @@ class Laser {
 		int height = 10;
 		int width = 4;
 		bool active = true;
+		// int get type
 	private:
 		Rectangle rect;
+		// int type
 };
 
 #endif // LASER_H

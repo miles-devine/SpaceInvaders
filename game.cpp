@@ -110,6 +110,8 @@ void Game::drawGame() {
 	for (auto& enemy: enemies) {
 		enemy.draw();
 	}
+
+	DrawText(TextFormat("SCORE: %d", score), 0 + 100, GetScreenHeight() - 50, 20, YELLOW);
 }
 
 void Game::takeInput() {
@@ -133,6 +135,8 @@ void Game::checkCollisions() { // Add some logic here to deal with the enemies g
 			enemyIT = enemies.erase(enemyIT);
 
 			laser->active = false;
+			// can have a method to update the score based on the type of the enemy
+			score += 10;
 
 			break;
 		}

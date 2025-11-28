@@ -25,6 +25,7 @@ class Game {
 		Ship ship;
 		Laser laser;
 		float movetimer{};
+		int score{};
 		
 };
 

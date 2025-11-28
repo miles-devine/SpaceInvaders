@@ -55,7 +55,7 @@ void Ship::disable_lasers() {
 void Ship::delete_lasers() {
 	if (!lasers.empty()) {
 		for (auto it = lasers.begin(); it != lasers.end();) {
-			if (!(*it)->active) {
+			if (!(*it)->active || (*it)->position.y < 0) {
 				delete *it;
 				it = lasers.erase(it);
 				std::cout << "Number of lasers: " << lasers.size() << "\n";
